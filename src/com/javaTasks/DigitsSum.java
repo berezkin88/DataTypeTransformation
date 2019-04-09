@@ -20,16 +20,11 @@ public class DigitsSum {
 	}
 
 	public int sum() {
-
-		if (origin == 0) {
-			return result += 0;
-		} else {
-			result += origin % 10;
-			origin = origin / 10;
-			sum();
-		}
-
-		return result;
+        while(origin!=0) {
+            result += origin % 10;
+            origin = origin / 10;
+        }
+        return result;
 	}
 
 	public int sumStr() {
